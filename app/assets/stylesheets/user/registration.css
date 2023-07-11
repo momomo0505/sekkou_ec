@@ -158,3 +158,8 @@
   text-align: right;
   cursor: pointer;
 }
+
+.alert{
+  color: red;
+  text-align: center;
+}
