@@ -1,0 +1,38 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+
+    activerecord:
+    attributes:
+      item:
+        image: 商品画像
+        name: 商品名
+        description: 商品の説明
+        price: 価格
+        category_id: カテゴリー
+        item_condition_id: 商品の状態
+        shipping_charge_id: 配送料の負担
+        days_to_ship_id: 発送までの日数
+        prefecture_id: 発送元の地域
+        
+
+  activemodel:   # Formオブジェクトを用いた場合
+     attributes:
+       order_form:
+        post_code: 郵便番号
+        name: 商品名
+        text: テキスト
+        image: 画像
+        description: 商品の説明
+        price: 価格
+        category: カテゴリー
+        item_condition: 商品の状態
+        shipping_charge: 配送料の負担
+        days_to_ship: 発送までの日数
+        tel: 電話番号
+        block: 番地
+        city: 市区町村
+        prefecture_id: 発送元の地域
+
+
