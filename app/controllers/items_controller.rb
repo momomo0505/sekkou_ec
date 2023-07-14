@@ -22,22 +22,27 @@ end
 def destroy
   if @item.user_id == current_user.id
     @item.destroy
-  end
     redirect_to root_path
+  else
+    redirect_to root_path, notice: "You are not authorized to delete this item."
+  end
 end
 
 def edit
-  if @item.user_id == current_user.id && @item.order.nil?
-  else
-    redirect_to root_path
+  unless @item.user_id == current_user.id
+    redirect_to root_path, notice: "You are not authorized to edit this item."
   end
 end
 
 def update
-  if @item.update(item_params)
-    redirect_to item_path(@item)
+  if @item.user_id == current_user.id
+    if @item.update(item_params)
+      redirect_to item_path(@item)
+    else
+      render 'edit'
+    end
   else
-    render 'edit'
+    redirect_to root_path, notice: "You are not authorized to update this item."
   end
 end
 
