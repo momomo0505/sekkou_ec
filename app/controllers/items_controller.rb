@@ -29,7 +29,7 @@ def destroy
 end
 
 def edit
-  unless @item.user_id == current_user.id
+  unless @item.user_id == current_user.id && @item.order.nil?
     redirect_to root_path, notice: "You are not authorized to edit this item."
   end
 end
