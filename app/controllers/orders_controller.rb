@@ -25,6 +25,7 @@ class OrdersController < ApplicationController
   end
 
   def pay_item
+ 商品購入機能実装
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"] # 自身のPAY.JPテスト秘密鍵
     Payjp::Charge.create(
       amount: @item.price, # 商品の値段
