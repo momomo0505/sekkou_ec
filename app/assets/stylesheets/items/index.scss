@@ -100,26 +100,31 @@ a {
 }
 
 .sold-out {
-  position: absolute;
-  top: 40%;
+  position: absolute;  // 追加
+  top: 0;             // 追加
+  left: 0;            // 追加
+  z-index: 2;         // 追加
   width: 100%;
   text-align: center;
-  background-color: rgb(73, 73, 73);
-  
+  background-color: rgb(255, 19, 19);
+  height: 60px;
+  width: 24vh;
 }
 
 .sold-out>span {
   color: #FFF;
-  font-size: 45px;
+  font-size: 35px;
   font: bold;
 }
 
 
 .item-info {
+  position: relative;
+  z-index: 1;
   background-color: #ffffff;
   color: black;
   padding: 1vw;
-  padding-right: 25%;
+  padding-right: 35%;
   margin-bottom: 20px;
 }
 
@@ -182,6 +187,27 @@ a {
 .item-img {
   width: 26vh;
   height: 33vh;
+}
+
+.sold-out {
+  position: absolute;  // 追加
+  top: 0;             // 追加
+  left: 0;            // 追加
+  z-index: 2;         // 追加
+  width: 100%;
+  text-align: center;
+  background-color: rgb(255, 19, 19);
+  height: 60px;
+}
+
+.item-info {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  color: black;
+  padding: 1vw;
+  padding-right: 5%;
+  margin-bottom: 20px;
 }
 
  }
