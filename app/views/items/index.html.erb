@@ -22,10 +22,13 @@
 <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
 <li class='list'>
   <%= link_to item_path(item) do %>
-  <div class='item-img-content'>
-    <%= image_tag item.image.variant(resize: '500x500'), class: "item-img" %>
+  
+<div class='item-img-content'>
+  <% if item.images.first %>
+    <%= image_tag item.images.first.variant(resize: '500x500'), class: "item-img" %>
+  <% end %>
+</div>
 
-  </div>
   <div class='item-info'>
     <%# //商品が売れていればsold outを表示 %>
     <% if item.order != nil %>

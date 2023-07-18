@@ -1,5 +1,19 @@
 /* 商品の概要 */
 
+.other-images {
+  display: flex;
+}
+
+.other-image {
+  margin-right: 10px;
+}
+
+.other-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .item-show {
   background-color: #ffffff;
   width: 100vw;
@@ -25,12 +39,17 @@
   font-size: 25px;
 }
 
+.item-img-content {
+  text-align: center;
+}
+
 .item-box-img {
   height: 50vh;
   width: 60vw;
   min-height: 500px;
   background-color: rgb(255, 255, 255);
   object-fit: contain;
+  margin: 0 auto; /* 追加 */
 }
 
 .item-price-box {
@@ -291,4 +310,16 @@
     align-items: center;
   }
 
+  .other-images {
+    display: flex;
+    align-items: flex-start; /* 追加 */
+  }
+
+  .other-image img {
+    width: 10vw;
+    height: auto;
+    object-fit: contain;
+  }
  }
+
+ 
