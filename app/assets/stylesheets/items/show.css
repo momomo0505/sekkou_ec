@@ -34,7 +34,7 @@
 }
 
 .item-price-box {
-  margin: 25px 0px;
+  margin: 5px 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -75,7 +75,7 @@
 
 .item-explain-box {
   font-size: 16px;
-  margin: 40px 0px;
+  margin: 5px 0px;
   overflow-wrap: anywhere;
 }
 
@@ -223,6 +223,7 @@
 }
 
 .setsumei{
+  margin-top: 10px;
   font-size: 18px;
   color: #6c6c6c;
 }
