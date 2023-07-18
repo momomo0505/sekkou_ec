@@ -3,9 +3,7 @@
 <%# 商品の概要 %>
 <div class="item-show">
   <div class="item-box">
-    <h2 class="name">
-      <%= @item.name %>
-    </h2>
+
     <div class="item-img-content">
       <%= image_tag @item.image.variant(resize: '500x500') ,class:"item-box-img" %>
       <%# 商品が売れている場合は、sold outを表示 %>
@@ -16,6 +14,9 @@
       <% end %>
       <%# //商品が売れている場合は、sold outを表示 %>
     </div>
+        <h2 class="name">
+      <%= @item.name %>
+    </h2>
     <div class="item-price-box">
       <span class="item-price">
         ¥<%= @item.price %>
@@ -41,7 +42,9 @@
    <% end %>
 
     <%# //ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
-
+   <div class="setsumei">
+   <h2>商品の説明</h2>
+   </div>
     <div class="item-explain-box">
       <span><%= @item.description %></span>
     </div>
@@ -100,14 +103,7 @@
       </button>
     </form>
   </div>
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
-  </div>
+
   <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
   <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
   <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>

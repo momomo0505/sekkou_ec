@@ -1,7 +1,7 @@
 /* 商品の概要 */
 
 .item-show {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
   height: 50vh;
   width: 60vw;
   min-height: 500px;
-  background-color: rgb(205, 202, 202);
+  background-color: rgb(255, 255, 255);
   object-fit: contain;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .item-explain-box {
-  font-size: 18px;
+  font-size: 16px;
   margin: 40px 0px;
   overflow-wrap: anywhere;
 }
@@ -205,3 +205,72 @@
   font-weight: bold;
   font-size: 23px;
 }
+
+.setsumei{
+  font-size: 18px;
+  color: #6c6c6c;
+}
+
+
+ /* スマホ表示 */
+ @media screen and (max-width: 600px) {
+
+  .item-box-img {
+    height: 50vh;
+    width: 90vw;
+    min-height: 470px;
+    background-color: rgb(255, 255, 255);
+    object-fit: contain;
+  }
+
+  .detail-table {
+    margin-bottom: 30px;
+    width: 90vw;
+  }
+
+  .comment-box {
+    width: 90vw;
+    background-color: #fff;
+    margin: 5vh 0;
+    text-align: center;
+  }
+
+  .detail-item {
+    width: 20%;
+    background-color: #eee;
+    border: 1px solid #dedede;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .item-price-box>.item-price {
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  .favorite-btn {
+    border-radius: 40px;
+    width: 15vw;
+    min-width:150px;
+    color: rgb(249, 75, 0);
+    border: 2px solid #ffb340;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .report-btn {
+    border-radius: 40px;
+    width: 15vw;
+    min-width: 150px;
+  
+    padding: 1vh 0;
+    color: black;
+    border: 2px solid #2d2d2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ }

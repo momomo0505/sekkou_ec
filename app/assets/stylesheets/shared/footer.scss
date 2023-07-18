@@ -3,7 +3,8 @@
 
 .ad-footer-contents {
   width: 100vw;
-  background-image: image-url('furima-footer.png');
+  height: 450px;
+  background-image: image-url('top.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -11,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5vh 15vw;
+  padding: 10vh 15vw;
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
@@ -66,3 +67,40 @@
 .footer>p {
   font-size: 14px;
 }
+
+
+/* タブレット対応 */
+@media screen and (max-width: 1024px) {
+
+}
+
+
+
+ /* スマホ表示 */
+ @media screen and (max-width: 600px) {
+.ad-footer-title {
+  font-size: 2.5vh;
+  margin-bottom: 2vh;
+}
+
+.ad-footer-explain {
+  font-size: 1.5vh;
+  line-height: 10px;
+}
+
+.ad-footer-contents {
+  width: 100vw;
+  height: 150px;
+  background-image: image-url('top.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+ }
