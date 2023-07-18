@@ -4,9 +4,10 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2vh 10vw;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 
 .search-bar-contents {
@@ -16,7 +17,7 @@
 }
 
 .furima-icon {
-  width: 10vw;
+  width: 25vw;
   margin-right: 10vw;
 }
 
@@ -93,7 +94,7 @@
 
 .login {
   text-decoration: none;
-  line-height: 32px;
+  line-height: 12px;
   margin-right: 3vw;
   color: #333333;
 }
@@ -101,4 +102,44 @@
 .sign-up {
   text-decoration: none;
   color: #333333;
+}
+
+/* タブレット対応 */
+@media screen and (max-width: 1024px) {
+
+
+
+}
+
+
+
+ /* スマホ表示 */
+ @media screen and (max-width: 600px) {
+
+  .furima-icon {
+    width: 35vw;
+    margin-right: 3vw;
+  }
+
+  .brand-list {
+font-size: 80%;
+  }
+  
+  .lists-right {
+    margin-left: 50%;
+    font-size: 80%;
+ }
+
+ .login {
+  text-decoration: none;
+  line-height: 0px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
 }
