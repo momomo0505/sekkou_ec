@@ -4,7 +4,7 @@ class Item < ApplicationRecord
 
   belongs_to :user
   has_one :order
-  has_one_attached :image
+  has_many_attached :images
 
   belongs_to :category
   belongs_to :item_condition
@@ -14,7 +14,7 @@ class Item < ApplicationRecord
 
 
   with_options presence: true do
-    validates :image
+    validates :images
     validates :name, length: { maximum: 40 }
     validates :description, length: { maximum: 1000 }
     validates :price, numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
