@@ -17,7 +17,7 @@
 }
 
 .furima-icon {
-  width: 20vw;
+  width: 25vw;
   margin-right: 10vw;
 }
 
@@ -115,6 +115,11 @@
 
  /* スマホ表示 */
  @media screen and (max-width: 600px) {
+
+  .furima-icon {
+    width: 35vw;
+    margin-right: 3vw;
+  }
 
   .brand-list {
 font-size: 80%;

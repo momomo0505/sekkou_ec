@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh 0;
+  padding: 2vh 0;
 }
 
 .item-box {
@@ -52,6 +52,7 @@
 
 .item-red-btn {
   text-align: center;
+  border-radius: 40px;
   background-color: #ea352d;
   font-size: 24px;
   font-weight: bold;
