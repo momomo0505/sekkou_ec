@@ -78,7 +78,7 @@
     <div class="option">
       <div class="favorite-btn">
         <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <span>カートに入れる</span>
+<%= link_to "カートに入れる", add_to_cart_item_path(@item), method: :post %>
       </div>
 
     </div>
