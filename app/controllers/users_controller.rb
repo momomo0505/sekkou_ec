@@ -14,4 +14,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def remove_item
+    @item = Item.find(params[:item_id]) # :id を :item_id に変更
+    current_user.cart.items.delete(@item)
+      
+    redirect_to user_path(current_user) # リダイレクト先が明示的になるよう修正
+  end
 end

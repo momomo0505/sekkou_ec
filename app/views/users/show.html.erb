@@ -17,9 +17,9 @@
               <%= image_tag item.images[0].variant(resize: '200x200'), class:"buy-item-img" %>
               <div class="item-details">
                 <p class="item-font"><%= item.name %></p>
-                <span class="item-font"><%= item.price %>円</span>
-              
+                <span class="item-font"><%= item.price %>円</span>              
                 <span class="item-font"><%= item.shipping_charge.name %></span>
+                  <%= link_to 'カートから消す', item_remove_item_path(item), method: :delete, class:"cart-delete-btn"  %>
               </div>
             </div>
           <% end %>
