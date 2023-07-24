@@ -46,6 +46,14 @@ def update
   end
 end
 
+def add_to_cart
+  @item = Item.find(params[:id])
+  unless current_user.cart.items.include?(@item)
+    current_user.cart.cart_items.create(item: @item)
+  end
+  redirect_to user_path(current_user)
+end
+
 private
 
 def item_params

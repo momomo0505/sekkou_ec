@@ -1,13 +1,37 @@
 <%= render "shared/second-header"%>
-<div class= "registration-main" %>
+<div class= "cart-main" %>
 
-<div class='form-wrap'>
+<div class='form-wrap2'>
   <div class='form-header'>
+    <div class='cart-header'>
  <%= "#{@user.nickname}さんのカートの中身"%>
-  <div class="form-group">
+ </div>
+  <div class="cart-form-group">
     <div class='form-text-wrap'>
 
-      
+    <div class='item-img-content'>
+<% @user.cart.items.each do |item| %>
+  <div class="cart-item">
+    <%= link_to item_path(item) do %>
+      <div class="cart-item-info">
+        <%= image_tag item.images[0].variant(resize: '200x200'), class:"buy-item-img" %>
+<div class="item-details">
+  <div class="item-details-main">
+    <p class="item-font"><%= item.name %></p>
+    <span class="item-font"><%= item.price %>円</span>
+    <br>
+    <span class="item-font"><%= item.shipping_charge.name %></span>
+    <%= link_to 'カートから消す', item_remove_item_path(item), method: :delete, class:"cart-delete-btn"  %>
+  </div>
+  <div class="item-details2">
+    <%= link_to '　購入　', item_orders_path(item), class: "cart-buy-red-btn" %>
+  </div>
+</div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+    </div>
 
           </div>
           </div>
