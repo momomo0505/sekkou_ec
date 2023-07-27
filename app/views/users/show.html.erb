@@ -17,7 +17,7 @@
         <%= image_tag item.images[0].variant(resize: '200x200'), class:"buy-item-img" %>
 <div class="item-details">
   <div class="item-details-main">
-    <p class="item-font"><%= item.name %></p>
+    <p class="item-font-name"><%= item.name %></p>
     <span class="item-font"><%= item.price %>円</span>
     <br>
     <span class="item-font"><%= item.shipping_charge.name %></span>
