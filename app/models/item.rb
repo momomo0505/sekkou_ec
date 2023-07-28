@@ -7,6 +7,7 @@ class Item < ApplicationRecord
   has_many_attached :images
   has_many :cart_items
   has_many :carts, through: :cart_items
+  has_many :comments
 
   belongs_to :category
   belongs_to :item_condition

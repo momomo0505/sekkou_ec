@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'items#index'
 
   resources :items do
-    resources :comments, only: :create
+    resources :comments, only: [:create]
     delete 'remove_item/:item_id', to: 'users#remove_item', as: 'remove_item'
     resources :orders, only: [:index, :create] 
     member do
