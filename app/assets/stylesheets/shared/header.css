@@ -52,7 +52,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1vh 0;
+
 }
 
 .lists-left {
@@ -143,12 +143,7 @@ font-size: 80%;
 }
 
 .nav {
-  font-size: 16px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
+  font-size: 15px;
 }
 
 }

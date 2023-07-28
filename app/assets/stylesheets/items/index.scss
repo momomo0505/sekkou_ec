@@ -134,13 +134,13 @@ a {
 }
 
 .item-price {
-  font-size: 1.5vh;
+  font-size: 2vh;
   display: flex;
   justify-content: space-between;
 }
 
 
-.star-btn {
+.category_name {
   display: flex;
   align-items: center;
 }
@@ -151,9 +151,7 @@ a {
   margin-right: 0.5vw;
 }
 
-.star-count {
-  font-size: 1.5vh;
-}
+
 
 /* //商品一覧 */
 
