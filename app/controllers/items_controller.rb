@@ -54,6 +54,12 @@ def add_to_cart
   redirect_to user_path(current_user)
 end
 
+def show
+  @item = Item.find(params[:id])
+  @comments = @item.comments.order(created_at: :desc)
+  @comment = Comment.new
+end
+
 private
 
 def item_params

@@ -77,7 +77,7 @@
     </table>
     <div class="option">
       <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
+        <%= image_tag "cart.png" ,class:"cart-icon" ,width:"20",height:"20"%>
 <%= link_to "カートに入れる", add_to_cart_item_path(@item), method: :post %>
       </div>
 
@@ -85,24 +85,46 @@
   </div>
   <%# /商品の概要 %>
 
-  <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。
-        <br>
-        不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      </p>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-    </form>
-  </div>
+<br>
 
-  <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
-  <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
-  <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
+      <div class="item_comments">
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+         <% if user_signed_in? %>
+          <%= form_with(model: [@item, @comment], local: true) do |f|%>
+            <div class="field">
+             
+              <%= f.text_field :content, id:"comment_content" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "質問する", class: :form__btn  %>
+            </div>
+            <% if @comment.errors.any? %>
+  <div class="error-message">
+    <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+    <ul>
+      <% @comment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+          <% end %>
+        <% end %> 
+        <%# // ログインしているユーザーには上記を表示する %>
+        <div class="comment_form">
+        <ul class="comments_lists">
+          <%# コメントを一覧 %>
+          <% @comments.each do |comment| %>
+            <li class="comments_list">
+              <%= comment.content %>
+              <%= comment.user.nickname %>
+            </li>
+           <% end %>
+          <%# // コメント一覧 %>
+        </ul>
+      </div>
+</div>
+
 </div>
 
 <%= render "shared/footer" %>
