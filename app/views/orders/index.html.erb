@@ -81,9 +81,9 @@
     <div class='sentaku'>
 
       <%= f.radio_button :delivery_method, 'handover', class: "delivery-method-radio-button", id: "handover-radio-button" %>
-       <label class="form-text">直接引き取り</label>
+       <label class="form-text2">直接引き取り</label>
       <%= f.radio_button :delivery_method, 'delivery', class: "delivery-method-radio-button", id: "delivery-radio-button" %>
-       <label class="form-text">配送先入力（発送希望はこちら）</label>
+       <label class="form-text2">配送先入力（発送はこちら）</label>
     </div>
   </div>
 </div>
@@ -96,7 +96,7 @@
       </h1>
       <div class="form-group">
         <div class='form-text-wrap'>
-          <label class="form-text">郵便番号</label>
+          <label class="form-text">郵便番号(ハイフン必須)</label>
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_field :"post_code", class:"input-default", id:"postal-code", placeholder:"例）123-4567", maxlength:"8" %>
@@ -120,14 +120,14 @@
           <label class="form-text">番地</label>
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_field :"block", class:"input-default", id:"addresses", placeholder:"例）平塚3-5-3"%>
+        <%= f.text_field :"block", class:"input-default", id:"addresses", placeholder:"例）南品川1-1"%>
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">建物名</label>
           <span class="form-any">任意</span>
         </div>
-        <%= f.text_field :"building", class:"input-default", id:"building", placeholder:"例）ディスタンス戸越101"%>
+        <%= f.text_field :"building", class:"input-default", id:"building", placeholder:"例）パームモール101"%>
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>

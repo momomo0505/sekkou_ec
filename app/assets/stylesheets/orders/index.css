@@ -219,8 +219,9 @@ width: 60vw;
 }
 
 .card-logo {
-  width: 40px;
-  margin: 5px 5px;
+  width: 30px;
+  margin: 3px 3px;
+  height: 20px;
 }
 
 
@@ -235,5 +236,16 @@ width: 60vw;
   cursor: pointer;
 }
 
+.form-text2{
+  font-size: 12px;
 }
 
+.sentaku{
+ 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ }
