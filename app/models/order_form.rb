@@ -1,6 +1,6 @@
 class OrderForm
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :block, :building, :tel, :token, :handover, :delivery
+  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :city, :block, :building, :tel, :token
   attr_accessor :delivery_method
 
   with_options presence: true do
@@ -16,7 +16,7 @@ class OrderForm
 
   def save
     order = Order.create(user_id: user_id, item_id: item_id)
-    if delivery
+    if delivery_method == 'delivery'
       Address.create(order_id: order.id, post_code: post_code, prefecture_id: prefecture_id, city: city, block: block, building: building, tel: tel)
     end
   end
