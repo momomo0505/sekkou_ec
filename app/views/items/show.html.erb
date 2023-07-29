@@ -3,7 +3,6 @@
 <%# 商品の概要 %>
 <div class="item-show">
   <div class="item-box">
-
 <div class="item-img-content">
   <%= image_tag @item.images[0].variant(resize: '500x500'), id:"main-image" ,class:"item-box-img" %>
 
@@ -78,39 +77,12 @@
     <div class="option">
       <div class="favorite-btn">
         <%= image_tag "cart.png" ,class:"cart-icon" ,width:"20",height:"20"%>
-<%= link_to "カートに入れる", add_to_cart_item_path(@item), method: :post %>
+          <%= link_to "カートに入れる", add_to_cart_item_path(@item), method: :post %>
+        </div>
       </div>
-
     </div>
-  </div>
-  <%# /商品の概要 %>
-
-<br>
-
-      <div class="item_comments">
-        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
-         <% if user_signed_in? %>
-          <%= form_with(model: [@item, @comment], local: true) do |f|%>
-            <div class="field">
-             
-              <%= f.text_field :content, id:"comment_content" %>
-            </div>
-            <div class="actions">
-              <%= f.submit "質問する", class: :form__btn  %>
-            </div>
-            <% if @comment.errors.any? %>
-  <div class="error-message">
-    <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-    <ul>
-      <% @comment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-          <% end %>
-        <% end %> 
-        <%# // ログインしているユーザーには上記を表示する %>
+          <%# /商品の概要 %>
+       <br>
         <div class="comment_form">
         <ul class="comments_lists">
           <%# コメントを一覧 %>
@@ -123,8 +95,31 @@
           <%# // コメント一覧 %>
         </ul>
       </div>
-</div>
-
-</div>
+      <div class="item_comments">
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+         <% if user_signed_in? %>
+          <%= form_with(model: [@item, @comment], local: true) do |f|%>
+            <div class="field">
+             
+              <%= f.text_field :content, id:"comment_content" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "質問する", class: :form__btn  %>
+            </div>
+            <% if @comment.errors.any? %>
+              <div class="error-message">
+             <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+            <ul>
+           <% @comment.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+           <% end %>
+          </ul>
+        </div>
+        <% end %>
+          <% end %>
+        <% end %> 
+        <%# // ログインしているユーザーには上記を表示する %>
+      </div>
+     </div>
 
 <%= render "shared/footer" %>

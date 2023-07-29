@@ -7,8 +7,8 @@
 
 .transaction-main {
   background-color: #FFF;
-  width: 70vw;
-  min-width: 450px;
+  width: 100%;
+  min-width: 150px;
   padding: 10vh 10vw;
 }
 
@@ -169,19 +169,15 @@ font-weight: bold;
 
 /* タブレット対応 */
 @media screen and (max-width: 1024px) {
-}
 
+}
 
 
  /* スマホ表示 */
  @media screen and (max-width: 600px) {
-
-.transaction-main {
-  background-color: #FFF;
-  width: 70vw;
-  min-width: 300px;
-  padding: 10vh 10vw;
-}
+  .buy-item-info {
+margin-left: 20%;
+  }
 
 .buy-item-img {
   margin-right: 5px;
@@ -227,12 +223,6 @@ width: 60vw;
   margin: 5px 5px;
 }
 
-.transaction-main {
-  background-color: #FFF;
-  width: 100%;
-  min-width: 300px;
-  padding: 4vh 4vw;
-}
 
 .buy-red-btn {
   width: 100%;

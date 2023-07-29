@@ -26,7 +26,7 @@
 .item-box {
   background-color: #FFF;
   width: 70vw;
-  min-width: 1200px;
+  min-width: 100px;
   padding: 0vh 15vw;
   display: flex;
   flex-direction: column;
@@ -247,12 +247,15 @@
   margin: 10px 5px 0 0;
 }
 
+#comment_content {
+  width: 40vw; 
+  height: 60px;  
+}
 
 .comment_form{
   margin-top: 10px;
-  width: 100%;
+  width: 40vw;
   background-color: #ffffff;
-  border: 1px solid #dedede;
   font-size: 14px;
   text-align: center; 
 }
@@ -296,6 +299,12 @@
 .sold-out>span {
   font-size: 38px;
 }
+
+.detail-table {
+  width: 60%;
+}
+
+
 }
 
  /* スマホ表示 */
@@ -377,7 +386,17 @@
   .sold-out>span {
     font-size: 32px;
   }
-
+  .item-red-btn {
+    text-align: center;
+    border-radius: 40px;
+    background-color: #ea352d;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+    margin: 20px 0px;
+    padding: 1vh 10vw;
+  }
+  
  }
 
  

@@ -139,13 +139,13 @@
     </div>
 
     <%# /配送先の入力 %>
-<%# ここに JavaScript を追加して、選択によって入力欄の表示を切り替える %>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', (event) => {
-  const handoverRadioButton = document.getElementById('handover-radio-button');
-  const deliveryRadioButton = document.getElementById('delivery-radio-button');
-  const shippingAddressForm = document.getElementById('shipping-address-form');
-  const shippingInputs = shippingAddressForm.querySelectorAll('input');
+   <%# 選択によって入力欄の表示を切り替える %>
+   <script type="text/javascript">
+   document.addEventListener('DOMContentLoaded', (event) => {
+     const handoverRadioButton = document.getElementById('handover-radio-button');
+     const deliveryRadioButton = document.getElementById('delivery-radio-button');
+     const shippingAddressForm = document.getElementById('shipping-address-form');
+     const shippingInputs = shippingAddressForm.querySelectorAll('input');
 
   function toggleShippingInputs() {
     if (handoverRadioButton.checked) {
@@ -173,4 +173,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     <% end %>
   </div>
 </div>
+
 <%= render "shared/second-footer"%>
