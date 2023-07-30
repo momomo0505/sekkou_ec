@@ -20,12 +20,14 @@ def create
 end
 
 def destroy
-  if @item.user_id == current_user.id
-    @item.destroy
-    redirect_to root_path
-  else
-    redirect_to root_path, notice: "You are not authorized to delete this item."
-  end
+if @item.user_id == current_user.id
+  @item.cart_items.destroy_all 
+  @item.comments.destroy_all
+  @item.destroy
+  redirect_to root_path
+else
+  redirect_to root_path, notice: "You are not authorized to delete this item."
+end
 end
 
 def edit

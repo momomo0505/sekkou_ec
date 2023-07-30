@@ -117,7 +117,7 @@
  @media screen and (max-width: 600px) {
 
   .furima-icon {
-    width: 35vw;
+    width: 45vw;
     margin-right: 3vw;
   }
 
@@ -126,7 +126,7 @@ font-size: 80%;
   }
   
   .lists-right {
-    margin-left: 50%;
+    margin-left: 60%;
     font-size: 80%;
  }
 

@@ -310,6 +310,10 @@
  /* スマホ表示 */
  @media screen and (max-width: 600px) {
 
+  .item-box {
+    width: 90vw;
+  }
+
   .item-box-img {
     height: 50vh;
     width: 90vw;
